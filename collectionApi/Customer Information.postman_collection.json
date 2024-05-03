@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "23d1c1e2-7e1f-4d5d-9898-47b0fa430b59",
+		"name": "Customer Information",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31687815"
+	},
+	"item": [
+		{
+			"name": "Customer API",
+			"item": [
+				{
+					"name": "Get All Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/api/Customer/api/customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Customer",
+								"api",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/api/Customer/api/customer/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Customer",
+								"api",
+								"customer",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/api/Customer/api/customer/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Customer",
+								"api",
+								"customer",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer By ID",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \r\n    \"path\": \"FirstName\",\r\n    \"op\": \"replace\",\r\n    \r\n    \"value\": \"Abd1o\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7201/api/Customer/api/customer/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Customer",
+								"api",
+								"customer",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer BY First Name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/api/Customer/api/customers/Abd1o",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Customer",
+								"api",
+								"customers",
+								"Abd1o"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"ahmed\",\r\n  \"lasttName\": \"omer\",\r\n  \"phoneNumber\": 05454,\r\n  \"email\": \"string@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7201/api/Customer/api/customers/Abdo",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Customer",
+								"api",
+								"customers",
+								"Abdo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address API",
+			"item": [
+				{
+					"name": "Get Address By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/api/Address/api/address/4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Address",
+								"api",
+								"address",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Addresses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/api/Address/api/address",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Address",
+								"api",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Address By City",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/api/Address/api/city/ss",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Address",
+								"api",
+								"city",
+								"ss"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Address",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"string\",\r\n  \"city\": \"string\",\r\n  \"country\": \"string\",\r\n  \"addressLine\": \"string\",\r\n  \"customerId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7201/api/Address/api/address",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Address",
+								"api",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Address",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/api/Address/api/address/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Address",
+								"api",
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Address",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n   \r\n    \"path\": \"city\",\r\n    \"op\": \"replace\",\r\n    \r\n    \"value\": \"omdurman\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7201/api/Address/api/address/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"api",
+								"Address",
+								"api",
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

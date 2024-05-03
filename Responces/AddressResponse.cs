@@ -1,47 +1,45 @@
 ﻿using Customer_Information.Models;
-using System.Globalization;
-using System.Xml.Linq;
 
 namespace Customer_Information.Responces
 {
-    public class CustomerResponse
+    public class AddressResponse
     {
-        public static Response<Customer> CustomerNotFound(int? Id=null ,string? name=null)
+        public static Response<Address> AddressNotFound(int? Id = null, string? city = null)
         {
-            string text = Id != null ? "Id" : "Name";
-            string vlaue= Id != null ? Id.ToString() : name;
-            return new Response<Customer>
-            {
+            string text = Id != null ? "Id" : "city";
+            string vlaue = Id != null ? Id.ToString() : city;
+            return new Response<Address>
+            { 
                 IsSuccess = false,
                 StatusCode = 404,
-                
-                ResponseMessage = $"No customer was found with  {text}:{vlaue}",
+
+                ResponseMessage = $"No Address was found with  {text}:{vlaue}",
                 Data = null
             };
         }
-        public static Response<Customer> NoCustomerFound()
+        public static Response<Address> NoAddressFound()
         {
-            return new Response<Customer>
+            return new Response<Address>
             {
                 IsSuccess = false,
                 StatusCode = 404,
-                ResponseMessage = $"No customer was found  ",
+                ResponseMessage = $"No Address was found  ",
                 Data = null
             };
         }
-        public static Response<Customer> CustomerFound(List<Customer> customer)
+        public static Response<Address> AddressFound(List<Address> addresses)
         {
-            return new Response<Customer>
+            return new Response<Address>
             {
                 IsSuccess = true,
                 StatusCode = 200,
                 ResponseMessage = $"retreaving data successfully",
-                Data = customer 
+                Data = addresses
             };
         }
-        public static Response<Customer> ServerError()
+        public static Response<Address> ServerError()
         {
-            return new Response<Customer>
+            return new Response<Address>
             {
                 IsSuccess = false,
                 StatusCode = 500,
@@ -49,19 +47,19 @@ namespace Customer_Information.Responces
                 Data = null
             };
         }
-        public static Response<Customer> CreatedSeccessfully(Customer customer)
+        public static Response<Address> CreatedSeccessfully(Address address)
         {
-            return new Response<Customer>
+            return new Response<Address>
             {
                 IsSuccess = true,
                 StatusCode = 201,
                 ResponseMessage = $" Created Seccessfully",
-                Data =  new List<Customer> { customer }
+                Data = new List<Address> { address }
             };
         }
-        public static Response<Customer> RemovedSeccessfully()
+        public static Response<Address> RemovedSeccessfully()
         {
-            return new Response<Customer>
+            return new Response<Address>
             {
                 IsSuccess = true,
                 StatusCode = 204,
@@ -69,19 +67,19 @@ namespace Customer_Information.Responces
                 Data = null
             };
         }
-        public static Response<Customer> UpdateSeccessfully( Customer customer)
+        public static Response<Address> UpdateSeccessfully(Address address)
         {
-            return new Response<Customer>
+            return new Response<Address>
             {
                 IsSuccess = true,
                 StatusCode = 200,
                 ResponseMessage = $" Update Seccessfully",
-                Data = new List<Customer> { customer }
+                Data = new List<Address> { address }
             };
         }
-        public static Response<Customer> BadRequest()
+        public static Response<Address> BadRequest()
         {
-            return new Response<Customer>
+            return new Response<Address>
             {
                 IsSuccess = false,
                 StatusCode = 400,
@@ -91,4 +89,5 @@ namespace Customer_Information.Responces
         }
 
     }
+
 }

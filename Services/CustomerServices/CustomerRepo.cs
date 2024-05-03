@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Base.Data;
-using Base.DTOS;
-using Base.Models;
-using Base.Responces;
+using Customer_Information.Data;
+using Customer_Information.DTOS;
+using Customer_Information.Models;
+using Customer_Information.Responces;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text.RegularExpressions;
 
-namespace Base.Services.CustomerServices
+namespace Customer_Information.Services.CustomerServices
 {
     public class CustomerRepo : ICustomerRepo
     {

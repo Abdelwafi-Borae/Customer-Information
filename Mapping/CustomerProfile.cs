@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Base.DTOS;
-using Base.Models;
+using Customer_Information.DTOS;
+using Customer_Information.Models;
 
-namespace Base.Mapping
+namespace Customer_Information.Mapping
 {
     public class CustomerProfile : Profile
     {

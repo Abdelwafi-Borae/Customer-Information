@@ -1,13 +1,14 @@
-﻿using Base.Services.CustomerServices;
+﻿using Customer_Information.Services.AddressServices;
+using Customer_Information.Services.CustomerServices;
 
-namespace Base.Services.UnitOfWork
+namespace Customer_Information.Services.UnitOfWork
 {
     public interface IUnitOfWork: IDisposable
     {
         void Commit();
         
         public ICustomerRepo customerRepo { get; }
-
+        public IAddressRepo addressRepo { get; }
 
     }
 }

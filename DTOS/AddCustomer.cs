@@ -1,6 +1,6 @@
-﻿using Base.Models;
+﻿using Customer_Information.Models;
 
-namespace Base.DTOS
+namespace Customer_Information.DTOS
 {
     public class AddCustomer
     {

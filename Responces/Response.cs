@@ -1,4 +1,4 @@
-﻿namespace Base.Responces
+﻿namespace Customer_Information.Responces
 {
     public class Response<T>
     {   public bool IsSuccess { get; set; }

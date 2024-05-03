@@ -1,11 +1,11 @@
-﻿using Base.DTOS;
-using Base.Models;
-using Base.Responces;
+﻿using Customer_Information.DTOS;
+using Customer_Information.Models;
+using Customer_Information.Responces;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Linq.Expressions;
 
-namespace Base.Services.CustomerServices
+namespace Customer_Information.Services.CustomerServices
 {
     public interface ICustomerRepo 
     {

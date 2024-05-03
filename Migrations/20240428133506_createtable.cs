@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Base.Migrations
+namespace Customer_Information.Migrations
 {
     public partial class createtable : Migration
     {

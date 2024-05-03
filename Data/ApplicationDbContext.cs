@@ -1,7 +1,7 @@
-﻿using Base.Models;
+﻿using Customer_Information.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Base.Data;
+namespace Customer_Information.Data;
 
 public class ApplicationDbContext : DbContext
 {

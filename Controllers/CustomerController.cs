@@ -1,13 +1,13 @@
-﻿using Base.Contracts;
-using Base.DTOS;
-using Base.Models;
-using Base.Responces;
-using Base.Services.UnitOfWork;
+﻿using Customer_Information.Contracts;
+using Customer_Information.DTOS;
+using Customer_Information.Models;
+using Customer_Information.Responces;
+using Customer_Information.Services.UnitOfWork;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Base.Controllers;
+namespace Customer_Information.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
