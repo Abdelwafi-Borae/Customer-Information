@@ -26,8 +26,9 @@ public class CustomerController : ControllerBase
     {
 
         Response<Customer> response = await _unitOfWork.customerRepo.AddCustomer(customer);
-        _unitOfWork.Commit();
-
+        
+        if(response.IsSuccess)
+         _unitOfWork.Commit();
         return Ok(response);
 
     }
@@ -42,7 +43,8 @@ public class CustomerController : ControllerBase
     public async Task<IActionResult> DeleteCustomer(int Id)
     {
         Response<Customer> response = await _unitOfWork.customerRepo.DeleteCustomer(Id);
-        _unitOfWork.Commit();
+        if(response.IsSuccess)
+         _unitOfWork.Commit();
         return Ok(response);
     }
 
@@ -63,7 +65,8 @@ public class CustomerController : ControllerBase
     public async Task<IActionResult> UpdateCustomer(int Id, JsonPatchDocument<Customer> patch)
     {
         Response<Customer> response = await _unitOfWork.customerRepo.UpdateCustomer(Id,patch);
-        _unitOfWork.Commit();
+        if(response.IsSuccess)
+         _unitOfWork.Commit();
         return Ok(response);
     }
 }

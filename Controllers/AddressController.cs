@@ -26,9 +26,9 @@ namespace Customer_Information.Controllers
         {
 
             Response<Address> response = await _unitOfWork.addressRepo.AddAddress(address);
-            _unitOfWork.Commit();
-
-            return Ok(response);
+            if(response.IsSuccess)
+         _unitOfWork.Commit();
+        return Ok(response);
 
         }
         [HttpGet(ApiRoute.AddressRoute.GetAddress)]
@@ -42,8 +42,9 @@ namespace Customer_Information.Controllers
         public async Task<IActionResult> DeleteAddress(int Id)
         {
             Response<Address> response = await _unitOfWork.addressRepo.DeleteAddress(Id);
-            _unitOfWork.Commit();
-            return Ok(response);
+            if(response.IsSuccess)
+         _unitOfWork.Commit();
+        return Ok(response);
         }
 
         [HttpGet(ApiRoute.AddressRoute.GetAddresses)]
@@ -63,8 +64,9 @@ namespace Customer_Information.Controllers
         public async Task<IActionResult> UpdateAddresses(int Id, JsonPatchDocument<Address> patch)
         {
             Response<Address> response = await _unitOfWork.addressRepo.UpdateAddress(Id, patch);
-            _unitOfWork.Commit();
-            return Ok(response);
+            if(response.IsSuccess)
+         _unitOfWork.Commit();
+        return Ok(response);
         }
     }
 }
